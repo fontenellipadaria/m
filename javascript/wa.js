@@ -4,7 +4,7 @@ $(document).on('click','.send_form', function(){
 
   /* Whatsapp Settings */
   var walink = 'https://web.whatsapp.com/send',
-  
+  phone = '+5511916359238'
   walink2 = 'Olá!',
   text_yes = 'Você foi redirecionado para o WhatsApp. Obrigado!';
   text_no = 'Por favor, preencha os campos obrigatórios.';
@@ -23,7 +23,7 @@ $(document).on('click','.send_form', function(){
    input_email1 = $("#wa_email").val(),
    //input_number1 = $("#wa_number").val(),
    //input_url1 = $("#wa_url").val(),
-   input_tlg = $("#tlg_num").val(),
+   assunto = $("#assunto").val(),
    input_textarea1 = $("#wa_textarea").val();
 
    /* Final Whatsapp URL */
@@ -34,7 +34,7 @@ $(document).on('click','.send_form', function(){
     '*E-mail*: ' + input_email1 + '%0A' +
     '*Soube por*: ' + input_select1 + '%0A' +
     //'*URL/Link*: ' + input_url1 + '%0A' +
-    '*Telegram*: ' + input_tlg + '%0A' +
+    '*Assunto*: ' + assunto + '%0A' +
     '*Mensagem*: ' + input_textarea1 + '%0A';
 
     /* Whatsapp Window Open */
