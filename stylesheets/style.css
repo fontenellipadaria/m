@@ -794,7 +794,7 @@ textarea {
   background: var(--btn-wp) !important;
   color: var(--bs-white) !important;
   border-radius: 50px !important;
-  box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 3px 8px 3px rgb(60 64 67 / 15%) !important;
+  box-shadow: rgb(0 0 0 / 40%) 1px 1px 4px ;
   transition: 0.2s !important;
   transform: scale(1) !important;
   visibility: visible;
