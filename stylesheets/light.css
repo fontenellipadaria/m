@@ -1,0 +1,8 @@
+body {
+  background: var(--bs-white);
+}
+
+h1, h2, p {
+  color: #363636;
+}
+

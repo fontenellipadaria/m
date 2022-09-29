@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Fontenelli Padaria</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Fontenelli Padaria" name="Fontenelli Padaria">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Fontenelli Padaria">
+    <meta name="description" content="🍞Pães 🍰Doces 🍕Pizzas 🥐Salgados 🍔Lanches">
+    <meta property="image" itemprop="image" content="https://raw.githubusercontent.com/fontenellipadaria/m/main/images/favicon.png" />
+    <meta name="keywords" content="Fontenelli Padaria, Facebook, YouTube, TikTok, Instagram, Loja Virtual" />
+    <meta itemprop="thumbnailUrl" content="https://raw.githubusercontent.com/fontenellipadaria/m/main/images/favicon.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Fontenelli Padaria">
+    <meta property="og:description" content="🍞Pães 🍰Doces 🍕Pizzas 🥐Salgados 🍔Lanches">
+    <meta property="og:image" itemprop="image" content="https://raw.githubusercontent.com/fontenellipadaria/m/main/images/favicon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="Fontenelli Padaria">
+    <meta property="twitter:description" content="🍞Pães 🍰Doces 🍕Pizzas 🥐Salgados 🍔Lanches">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/fontenellipadaria/m/main/images/favicon.png">
+
+
+    <!-- Código do Schema.org também para o Google+ -->
+    <meta itemprop="name" content="Fontenelli Padaria">
+    <meta itemprop="description" content="Fontenelli Padaria">
+
+
+    <!-- STYLE -->
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <link id="active-stylesheet" href="" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/sweetalert2.css">
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://raw.githubusercontent.com/fontenellipadaria/m/main/images/favicon.png" type="image/x-icon" rel="icon" />
+    <link href="https://raw.githubusercontent.com/fontenellipadaria/m/main/images/favicon.png" type="image/x-icon" rel="shortcut icon" />
+    <link rel="manifest" href="/manifest.webmanifest">
+    <!--<link rel="manifest" href="manifest.json">-->
+    <!-- FAVICON -->
+    <link href="https://raw.githubusercontent.com/fontenellipadaria/m/main/images/favicon.png" rel="icon">
+    <link href="https://raw.githubusercontent.com/fontenellipadaria/m/main/images/favicon.png" rel="apple-touch-icon">
+
+    <!-- FONTES -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/all.css">
+</head>
+
+<body>
+    <div id="ctnClickShort"
+        style="display: block; background-color: white; padding: 10px; border: none; position: fixed; bottom: 90px; z-index: 9999; width: 90%; left: 45%; text-align: left; margin-left: -40%; box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px;">
+        <button type="button" style="
+        background: none;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        padding-right: 30px;
+    "><img style="width:40px;height:40px;float: left;margin-right: 10px;"
+                src="images/favicon.png">
+            <span class="title-add" style="
+    ">Instalar app à tela inicial.</span>
+        </button>
+        <a href="javascript:;" onclick="closeCreateShort(this);"
+            style="position:absolute;right: 8px;top: 0;font-size: 23px;color: var(--themecolor);"><i class="fa fa-times"></i></a>
+    </div>
+
+    <div id="load" class="load is-loading">
+        <div class="circle load-cor"></div>
+        <div class="circle load-cor-2"></div>
+    </div>
+
+    <div class='navbar no-items section' id='navbar'>
+        <div class="switch-buttons">
+            <div class='container d-flex justify-content-center p-0'>
+                <button type="button" class="btn btn-primary mr-2 b-share" data-bs-toggle="modal"
+                    data-bs-target="#ShareModal" title="Compartilhar!">
+                    <i class="fas fa-share"></i>
+                </button>
+                <button type="button" class="btn btn-primary mx-auto b-config" data-bs-toggle="modal"
+                    data-bs-target="#ConfigModal" title="Compartilhar!">
+                    <i class="fas fa-gear"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Share modal -->
+    <div class="modal fade" id="ShareModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content col-12">
+                <div class="modal-header">
+                    <h5 class="modal-title">Compartilhar</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="icon-container2 d-flex">
+                        <div class="smd" onclick="da_share.fb();">
+                            <i class="img-thumbnail fab fa-facebook fa-1x" style="color: #3b5998;"></i>
+                            <p>Facebook</p>
+                        </div>
+                        <div class="smd" onclick="da_share.tw();">
+                            <i class=" img-thumbnail fab fa-twitter fa-1x" style="color:#4c6ef5;"></i>
+                            <p>Twitter</p>
+                        </div>
+                        <div class="smd" onclick="da_share.wp();">
+                            <i class="img-thumbnail fab fa-whatsapp fa-1x" style="color: #25D366;"></i>
+                            <p>Whatsapp</p>
+                        </div>
+                        <div class="smd" onclick="da_share.tg();">
+                            <i class="img-thumbnail fab fa-telegram fa-1x" style="color: #4c6ef5;"></i>
+                            <p>Telegram</p>
+                        </div>
+                    </div>
+
+
+                    <div class="row mx-auto mb-2 mt-1">
+
+                        <!--<label for="formFile" class="form-label text-end">Copiar link</label>-->
+                        <div style="width: 93%;" class="input-group my-3 mx-auto">
+
+                            <input type="url" class="form-control" placeholder="" aria-describedby="button-addon2"
+                                id="myCopy" value="" disabled>
+                            <button class="btn btn-secondary btn-copy" type="button" id="button-addon2"
+                                onclick="copyLink()">Copiar</button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Share modal -->
+    <!-- Modal config -->
+    <div class="modal fade" id="ConfigModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content col-12">
+                <div class="modal-header">
+                    <h5 class="modal-title">Configurações</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body py-5">
+
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-light switch-buttons__light button mb-2" type="button"
+                            data-stylesheet="stylesheets/light.css"><i aria-hidden='true' class="fa-solid fa-sun"></i>
+                            Light</button>
+                        <button class="btn btn-dark switch-buttons__dark button" type="button"
+                            data-stylesheet="stylesheets/dark.css"><i aria-hidden='true' class="fa-solid fa-moon"></i>
+                            Dark</button>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal config -->
+    <!-- Button video modal -->
+    <div class="image-profile "><a style="border-radius:100% ;" type="button" href="" data-bs-toggle="modal"
+            data-bs-target="#VideoModal1">
+            <div id='userphoto' title="Clique para ver!"></div>
+            <span class="badge pub shake pub-link">Pub</span>
+        </a>
+    </div>
+    <!-- Button video modal -->
+
+    <!-- pub modal -->
+    <div class="modal fade" id="VideoModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title titulo-pub mr-2" id="exampleModalLabel"><span
+                            class="badge bg-secondary">Pub</span> </h5>
+
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <!--TIKTOK VIDEO-->
+                    <blockquote class="tiktok-embed" cite="" data-video-id="" style="">
+                        <section></section>
+                    </blockquote>
+                    <script async src="https://www.tiktok.com/embed.js"></script>
+                    <!--TIKTOK VIDEO-->
+
+                    <!-- YouTube 16:9 aspect ratio-->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item pub-vid" src="" id="ytb" allowscriptaccess="always"
+                            allow="autoplay" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <!--YouTube 16:9 aspect ratio-->
+
+                    <!--Banner pub-->
+                    <a class="pub-link" href="">
+                        <img src="" class="pub-img img-fluid rounded mx-auto d-block load is-loading" alt="">
+                    </a>
+                    <!--Banner pub-->
+
+                    <!--texto pub-->
+                    <p class="pub-texto mb-0 pt-3"></p>
+                    <!--texto pub-->
+
+                </div>
+                <div class="modal-footer">
+                    <a href="" class="btn btn-info pub-link" role="button" aria-disabled="true">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- pub modal -->
+
+    <!-- < USERNAME > -->
+    <spam class='username'>
+        <h1></h1>
+        <span class="material-icons i-vrf" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-custom-class="custom-tooltip" data-bs-title="Verificado">verified</span>
+    </spam>
+
+
+    <!-- < USERNAME > -->
+    <!-- < Description > -->
+    <div class="description" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+        aria-controls="collapseTwo">
+        <h2 class="d-inline-flex">
+            <span class="legenda"> </span>
+            <span class="dropdowntoggle caret"><i class="fa-solid fa-angle-down"></i></span>
+        </h2>
+        <div id="accordion">
+            <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                <div class="py-1 card-body texto_bio"></div>
+            </div>
+        </div>
+    </div>
+    <!--< Description > -->
+    <!-- < MENU DE LINKS >  -->
+    <div id='links'>
+        <a class='link button-especial' href=''></a>
+        <a class='link button-comprar' href=''></a>
+        <a class='link button-extra01' href='' target='_blank'></a>
+        <a class='link button-extra02' href='' target='_blank'></a>
+        <a class='link button-extra03' href='' target='_blank'></a>
+
+        <a class='link button-youtube' href='' target='_blank'><i aria-hidden='true' class='fab fa-youtube'></i> YouTube
+        </a>
+        <a class='link button-tiktok' href='' target='_blank'><i class="fa-brands fa-tiktok"></i> TikTok </a>
+        <a class='link button-instagram' href='' target='_blank'><i aria-hidden='true' class='fab fa-instagram'></i>
+            Instagram </a>
+        <a class='link button-facebook' href='' target='_blank'><i aria-hidden='true' class='fab fa-facebook'></i>
+            Facebook </a>
+        <a class='link button-twitch' href='' target='_blank'><i aria-hidden='true' class='fab fa-twitch'></i> Twitch
+        </a>
+        <a class='link button-twitter' href='' target='_blank'><i aria-hidden='true' class='fab fa-twitter'></i> Twitter
+        </a>
+        <a class='link button-pinterest' href='' target='_blank'><i aria-hidden='true' class='fab fa-pinterest'></i>
+            Pinterest </a>
+        <a class='link button-kwai' href='' target='_blank'><i aria-hidden='true' class='fa-brands fa-kickstarter'></i>
+            Kwai </a>
+        <a class='link button-snapchat' href='' target='_blank'><i aria-hidden='true' class='fab fa-snapchat'></i>
+            Snapchat </a>
+        <a class='link button-reddit' href='' target='_blank'><i aria-hidden='true' class='fab fa-reddit-alien'></i>
+            Reddit </a>
+        <a class='link button-linkedin' href='' target='_blank'><i aria-hidden='true' class='fab fa-linkedin'></i>
+            LinkedIn </a>
+        <a class='link button-discord' href='' target='_blank'><i aria-hidden='true' class='fab fa-discord'></i> Discord
+        </a>
+        <a class='link button-github' href='' target='_blank'><i aria-hidden='true' class='fab fa-github'></i> GitHub
+        </a>
+        <a class='link button-whatsapp' href='' target='_blank'><i aria-hidden='true' class='fab fa-whatsapp'></i>
+            WhatsApp </a>
+        <a class='link button-telegram' href='' target='_blank'><i aria-hidden='true' class='fab fa-telegram-plane'></i>
+            Telegram </a>
+        <a class='link button-endereco' href='' target='_blank'><i aria-hidden='true' class="fas fa-map-marker-alt"></i>
+            Endereço </a>
+    </div>
+    <!--< MENU DE LINKS > -->
+
+
+    <!-- < Footer > -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="text-center footer">
+                    <a href="#" target='_blank'>Powered by <b></b></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button id="clear-storage">Limpar cache</button>
+            </div>
+        </div>
+    </div>
+    <!-- < Footer > -->
+
+
+    <button type="button" class="btn btn-primary chat" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-whatever="@mdo"><i aria-hidden='true' class='fab fa-whatsapp'></i></button>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="exampleModalLabel">Contato via WhatsApp</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-2">
+                    <p class="paragraph-text m-1">Preencha os campos para enviar mensagem no WhatsApp.</p>
+                    <form class="needs-validation" id="messageForm" novalidate>
+                        <div class="whatsappFormRow">
+                            <div class="label">Nome <span>*</span></div>
+                            <input type="text" id="wa_name" name="Nome" class="form-control" placeholder="Nome"
+                                required>
+                            <div class="valid-feedback">
+                                Bom!
+                            </div>
+                            <div class="invalid-feedback">
+                                Obrigatório
+                            </div>
+                        </div>
+                        <div class="whatsappFormRow">
+                            <div class="label">E-mail <span>*</span></div>
+                            <input class="form-control" id="wa_email" name="Email" type="email" value='' minlength="11"
+                                placeholder="E-mail" required>
+                            <div class="valid-feedback">
+                                Bom!
+                            </div>
+                            <div class="invalid-feedback">
+                                Obrigatório
+                            </div>
+                        </div>
+                        <div class="form-group whatsappFormRow">
+                            <div class="label">Como ficou sabendo?</div>
+                            <select class="form-control" id="wa_select" name="Como ficou sabendo?">
+                                <option hidden='hidden' selected='selected' value='default'>Opções</option>
+                                <option value="Redes Sociais">Redes Sociais</option>
+                                <option value="Um Amigo">Amigo</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                            <div class="valid-feedback">
+                                Opcional!
+                            </div>
+                        </div>
+
+                        <!--<div class="form-group whatsappFormRow">
+                          <div class="label">Qual sua idade?</div>
+                          <div class="datainput">
+                            <input class="form-control" id="wa_number" name="count" required="" type="number" value="">
+                            <span class="highlight"></span><span class="bar"></span>
+                            </div>
+                          </div>-->
+
+                        <div class="form-group whatsappFormRow">
+                            <div class="label">Telegram</div>
+                            <input class="form-control" id="tlg_num" name="Telegram" inputmode="numeric"
+                                xdata-mask="(99) 99999-9999" placeholder="Telegram" value='' />
+                            <div class="valid-feedback">
+                                Opcional!
+                            </div>
+                        </div>
+
+                        <div class="whatsappFormRow mb-2">
+                            <div class="label">Mensagem</div>
+                            <textarea class="form-control" rows="3" id='wa_textarea' placeholder='' row='1'
+                                name="Mensagem"></textarea>
+                        </div>
+                        <div id="text-info"></div>
+                        <div class="modal-footer pt-2 pb-0 px-0">
+
+                            <button class="send_form whatsappFormRow btn btn-success me-0" href="javascript:void"
+                                type="submit" title="Enviar Mensagem">
+                                <span class="fab fa-whatsapp"></span> Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/jquery.mask.js"></script>
+    <script src="javascript/jquery.maskMoney.min.js"></script>
+    <script src="javascript/sweetalert2.all.min.js"></script>
+    <script src="javascript/jquery.validate.min.js"></script>
+    <script src="javascript/wa.js"></script>
+    <script src="javascript/tlg.js"></script>
+    <script src="javascript/bootstrap.bundle.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/script.js"></script>
+    <script src="javascript/generate-sw.js"></script>
+
+    <script type="text/javascript">
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('sw.js')
+                .then(() => { console.log('Service Worker Registered'); });
+        }
+        let deferredPrompt;
+        const addBtn = document.querySelector('#ctnClickShort button');
+        addBtn.closest('#ctnClickShort').style.display = 'none';
+        window.addEventListener('beforeinstallprompt', (e) => {
+
+            // Prevent Chrome 67 and earlier from automatically showing the prompt
+            e.preventDefault();
+            // Stash the event so it can be triggered later.
+            deferredPrompt = e;
+            // Update UI to notify the user they can add to home screen
+            if (!localStorage.getItem('naoMostrarCreateShort_319_20220928')) {
+                addBtn.closest('#ctnClickShort').style.display = 'block';
+            }
+            addBtn.addEventListener('click', (e) => {
+                // hide our user interface that shows our A2HS button
+                addBtn.closest('#ctnClickShort').style.display = 'none';
+                // Show the prompt
+                deferredPrompt.prompt();
+                // Wait for the user to respond to the prompt
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the A2HS prompt');
+                        $.post('manifest.webmanifest', {}, function () {
+                        });
+
+                    } else {
+                        console.log('User dismissed the A2HS prompt');
+                    }
+                    deferredPrompt = null;
+                });
+            });
+        });
+
+
+        function closeCreateShort(e) {
+            localStorage.setItem('naoMostrarCreateShort_319_20220928', 'sim');
+            $(e).closest('#ctnClickShort').hide();
+
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
